@@ -4,6 +4,10 @@
 
 This project uses the YOLO model to detect license plates in videos and EasyOCR to recognize characters on the plates. The results are exported to a new video with the recognized license plate displayed directly on each frame.
 
+### Demo
+
+▶️ [Watch the demo video](https://drive.google.com/file/d/1ioxro5FmDVlINGWTFQ2yDBOaa36MJudf/view?usp=drive_link)
+
 ## System Requirements
 
 - Python 3.x
