@@ -51,6 +51,6 @@ pip install opencv-python numpy easyocr ultralytics
 - EasyOCR recognizes English letters and numbers; you can customize the language if needed.
 - Make sure your GPU has the appropriate drivers and CUDA installed if using EasyOCR with GPU.
 
-### Contact
+## Contact
 
 For questions, please contact via email: nguyenphuongv07@gmail.com.
