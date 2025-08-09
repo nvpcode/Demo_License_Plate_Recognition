@@ -1,8 +1,8 @@
-# Project_License_Plate_Recognition
+# Project_License_Plate_Recognition_Yolov8_EasyOCR
 
 ## Introduction
 
-This project uses the YOLO model to detect license plates in videos and EasyOCR to recognize characters on the plates. The results are exported to a new video with the recognized license plate displayed directly on each frame.
+This project uses the YOLOv8 model to detect license plates in videos and EasyOCR to recognize characters on the plates. The results are exported to a new video with the recognized license plate displayed directly on each frame.
 
 ### Demo
 
@@ -24,12 +24,12 @@ pip install opencv-python numpy easyocr ultralytics
 - `main.py`: Main source code for license plate detection and recognition from video.
 - `car_video.mp4`: Input video containing vehicles for license plate recognition.
 - `output_video.avi`: Output video with recognized license plates.
-- `../model_detect_License_Plate/runs/detect/train/weights/best.pt`: Pre-trained YOLO weights for license plate detection.
+- `license_plate_detector_yolov8.pt`: Pre-trained YOLOv8 weights for license plate detection.
 
 ## Usage Guide
 
 1. Place the video to be processed in the same folder as `main.py` and rename it to `car_video.mp4` (or update the `video_path` variable in the source code).
-2. Make sure the YOLO weights file is available at `../model_detect_License_Plate/runs/detect/train/weights/best.pt`.
+2. Make sure the YOLOv8 weights file is available at `license_plate_detector_yolov8.pt`.
 3. Run the program:
     ```sh
     python main.py
@@ -39,7 +39,7 @@ pip install opencv-python numpy easyocr ultralytics
 ## Workflow
 
 - Read each frame from the video.
-- Use YOLO to detect license plate regions.
+- Use YOLOv8 to detect license plate regions.
 - Preprocess the license plate region (grayscale, enhance, sharpen, resize if needed).
 - Recognize characters using EasyOCR, keeping only valid characters (A-Z, 0-9, hyphen).
 - Draw bounding boxes and display the license plate text on the frame.
@@ -47,7 +47,7 @@ pip install opencv-python numpy easyocr ultralytics
 
 ## Notes
 
-- The YOLO model must be pre-trained with a suitable license plate dataset.
+- The YOLOv8 model must be pre-trained with a suitable license plate dataset.
 - EasyOCR recognizes English letters and numbers; you can customize the language if needed.
 - Make sure your GPU has the appropriate drivers and CUDA installed if using EasyOCR with GPU.
 
